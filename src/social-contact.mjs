@@ -2,9 +2,10 @@ const templateContent = `
   <style>
     .social-contact-container {
       display: flex;
+      padding: 16px;
     }
     .social-contact-container a {
-        margin-right: 6px;
+        margin-right: 16px;
     }
     .social-contact-container a:last-of-type {
         margin-right: 0;
@@ -60,6 +61,13 @@ function constructFacebookContact(username) {
     };
 }
 
+function constructInstagramContact(username) {
+    return {
+        brandImage: '../images/instagram.png',
+        profile: `https://www.instagram.com/${username}`
+    };
+}
+
 class SocialContact extends HTMLElement {
   constructor() {
     super();
@@ -75,6 +83,7 @@ class SocialContact extends HTMLElement {
     const linkedin = this.getAttribute('linkedin') || '';
     const twitter = this.getAttribute('twitter') || '';
     const facebook = this.getAttribute('facebook') || '';
+    const instagram = this.getAttribute('instagram') || '';
 
     const socialContacts = [];
 
@@ -89,6 +98,9 @@ class SocialContact extends HTMLElement {
     }
     if (facebook) {
         socialContacts.push(constructFacebookContact(facebook));
+    }
+    if (instagram) {
+        socialContacts.push(constructInstagramContact(instagram));
     }
 
     if (socialContacts.length) {
