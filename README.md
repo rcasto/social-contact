@@ -5,7 +5,7 @@ The following social networks are currently supported:
 - Twitter
 - LinkedIn
 - Facebook
-- Instagram (haven't added yet)
+- Instagram
 - GitHub
 
 The component itself renders like below:  
