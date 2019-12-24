@@ -1,0 +1,15 @@
+{
+  "name": "social-contact",
+  "version": "1.0.0",
+  "description": "A web component that displays your contact information across the most popular social networks.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.12.0"
+  },
+  "scripts": {
+    "start": "http-server ./"
+  },
+  "author": "Richie Casto (https://github.com/rcasto)",
+  "license": "MIT"
+}

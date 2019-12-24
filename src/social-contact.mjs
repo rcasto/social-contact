@@ -1,18 +1,10 @@
 const templateContent = `
   <style>
-    .readability-container {
+    .social-contact-container {
       display: flex;
-      flex-direction: column;
-    }
-    .readability-container * {
-      margin-left: auto;
     }
   </style>
-  <div class="readability-container">
-    <div class="readability-level"></div>
-    <div class="readability-time"></div>
-  </div>
-  <slot name="readable-text"></slot>
+  <div class="social-contact-container"></div>
 `;
 
 const template = document.createElement('template');
@@ -32,4 +24,4 @@ class SocialContact extends HTMLElement {
   }
 }
 
-customElements.define('read-ability', Readability);
+customElements.define('social-contact', SocialContact);
