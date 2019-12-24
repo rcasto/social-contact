@@ -1,7 +1,7 @@
 const templateContent = `
   <style>
     .social-contact-container {
-      display: inline-flex;
+      display: flex;
       padding: 16px;
     }
     .social-contact-container a {
