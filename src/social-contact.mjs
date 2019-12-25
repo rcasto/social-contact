@@ -2,6 +2,7 @@ const templateContent = `
   <style>
     .social-contact-container {
       display: flex;
+      justify-content: center;
       padding: 16px;
     }
     .social-contact-container a {
