@@ -13,6 +13,8 @@ The component itself renders like below:
 
 Each one of the social profile links will open in a new tab when clicked.
 
+[Try it out yourself!](https://rcasto.github.io/social-contact)
+
 ## Integration
 Include the following script tag on your web page:
 ```html
@@ -32,7 +34,7 @@ Include the following script tag on your web page:
 
 If any of these properties is omitted, then that social contact method is simply not rendered.
 
-For each of the social contact methods, all you need to provide to the web component property is the username associated with the profile.
+For each of the social contact methods, all you need to provide to the web component property is the username associated with the social network profile.
 
 ## References
 - https://brand.linkedin.com/downloads
