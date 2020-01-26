@@ -31,7 +31,7 @@ function constructSocialContact(socialContact) {
     const socialAnchor = document.createElement('a');
     socialAnchor.href = socialContact.profile;
     socialAnchor.target = '_blank';
-    socialAnchor.id = socialContact.id;
+    socialAnchor.id = `social-contact-${socialContact.id}`;
 
     const socialImage = document.createElement('img');
     socialImage.src = socialContact.brandImage;
