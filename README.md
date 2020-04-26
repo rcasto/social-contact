@@ -16,7 +16,14 @@ Each one of the social profile links will open in a new tab when clicked.
 [Try it out yourself!](https://rcasto.github.io/social-contact)
 
 ## Integration
-Include the following script tag on your web page:
+Include one of the following script tags on your web page:
+
+```html
+<script defer src="https://cdn.jsdelivr.net/gh/rcasto/social-contact/dist/social-contact.min.js"></script>
+```
+
+**Or**
+
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/gh/rcasto/social-contact@master/src/social-contact.mjs"></script>
 ```
