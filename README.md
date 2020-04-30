@@ -39,7 +39,7 @@ Each one of the social profile links will open in a new tab when clicked.
         linkedin="rcasto">
     </social-contact>
 
-    <script src="https://cdn.jsdelivr.net/npm/social-contact@1.0.0/dist/social-contact.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/social-contact@1.0.1/dist/social-contact.min.js"></script>
     <script>
         window.addEventListener('load', () => {
             // Register the custom element under the name 'social-contact', or name
