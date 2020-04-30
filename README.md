@@ -13,7 +13,7 @@ The component itself renders like below:
 
 Each one of the social profile links will open in a new tab when clicked.
 
-[Try it out yourself!](https://rcasto.github.io/social-contact)
+[Try it out yourself! (codepen)](https://codepen.io/rcasto/pen/zYvdJqV)
 
 ## Usage
 ```html
