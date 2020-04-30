@@ -18,7 +18,8 @@
     "start:dev": "npm run build:dev -- --watch &",
     "build": "npm run build:dev && npm run build:prod",
     "build:dev": "rollup --config rollup/rollup.config.dev.js",
-    "build:prod": "rollup --config rollup/rollup.config.prod.js"
+    "build:prod": "rollup --config rollup/rollup.config.prod.js",
+    "prepublish": "npm run build"
   },
   "author": "Richie Casto (https://github.com/rcasto)",
   "homepage": "https://github.com/rcasto/social-contact#readme",
