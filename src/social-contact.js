@@ -81,7 +81,7 @@ function constructInstagramContact(username) {
     };
 }
 
-class SocialContact extends HTMLElement {
+export default class SocialContact extends HTMLElement {
     constructor() {
         super();
     }
@@ -130,5 +130,3 @@ class SocialContact extends HTMLElement {
         shadowRoot.appendChild(socialContactTemplateClone);
     }
 }
-
-customElements.define('social-contact', SocialContact);

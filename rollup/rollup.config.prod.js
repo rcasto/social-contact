@@ -6,7 +6,8 @@ const config = {
     output: [
 		{
 			file: 'dist/social-contact.min.js',
-			format: 'iife'
+			format: 'iife',
+			name: 'SocialContact'
 		}
 	]
 };
