@@ -15,28 +15,44 @@ Each one of the social profile links will open in a new tab when clicked.
 
 [Try it out yourself!](https://rcasto.github.io/social-contact)
 
-## Integration
-Include one of the following script tags on your web page:
-
-```html
-<script defer src="https://cdn.jsdelivr.net/gh/rcasto/social-contact/dist/social-contact.min.js"></script>
-```
-
-**Or**
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/gh/rcasto/social-contact@master/src/social-contact.mjs"></script>
-```
-
 ## Usage
 ```html
-<social-contact
-    github="your-github-username"
-    linkedin="your-linkedin-username"
-    twitter="your-twitter-username"
-    facebook="your-facebook-username"
-    instagram="your-instagram-username">
-</social-contact>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social Contact - Web Component</title>
+    <style>
+        social-contact {
+            display: block;
+            width: 320px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <social-contact
+        github="rcasto"
+        linkedin="rcasto">
+    </social-contact>
+
+    <script src="https://cdn.jsdelivr.net/npm/social-contact@1.0.0/dist/social-contact.min.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            // Register the custom element under the name 'social-contact', or name
+            // of your choosing, it must have a '-' in it.
+            //
+            // It will then be usable, in this case via:
+            // <social-contact></social-contact> as seen above
+            customElements.define('social-contact', SocialContact);
+        });
+    </script>
+</body>
+
+</html>
 ```
 
 If any of these properties is omitted, then that social contact method is simply not rendered.
