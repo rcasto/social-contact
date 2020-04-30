@@ -45,12 +45,19 @@
     </div>
 
     <div class="social-contact-render-location">
+        <!-- The social network info is passed to the WebComponent
+        via attributes, simply provide your username for the corresponding social network -->
         <social-contact github="rcasto" linkedin="rcasto"></social-contact>
     </div>
 
-    <script src="dist/social-contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/social-contact@1.0.0/dist/social-contact.min.js"></script>
     <script>
         window.addEventListener('load', () => {
+            // Register the custom element under the name 'social-contact', or name
+            // of your choosing, it must have a '-' in it.
+            //
+            // It will then be usable, in this case via:
+            // <social-contact></social-contact> as seen above
             customElements.define('social-contact', SocialContact);
 
             const socialContactRenderContainer = document.querySelector('.social-contact-render-location');
