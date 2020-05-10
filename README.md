@@ -1,12 +1,13 @@
 # Social Contact Web Component
 A web component that displays your contact information across the most popular social networks.
 
-The following social networks are currently supported:
-- Twitter
-- LinkedIn
-- Facebook
-- Instagram
-- GitHub
+| Social Network | Social Contact attribute |
+|----------------|--------------------------|
+| Twitter        | twitter                  |
+| LinkedIn       | linkedin                 |
+| Facebook       | facebook                 |
+| Instagram      | instagram                |
+| GitHub         | github                   |
 
 The component itself renders like below:  
 ![Social Contact Rendered Screenshot](./images/social-contact-screenshot.png)
