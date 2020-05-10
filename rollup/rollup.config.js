@@ -4,8 +4,10 @@ import image from '@rollup/plugin-image';
 const config = {
 	input: 'src/social-contact.js',
 	plugins: [
-		babel(),
-		image()
+		image(),
+		babel({
+			babelHelpers: 'bundled'
+		})
 	],
 };
 

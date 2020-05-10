@@ -5,9 +5,17 @@ const config = {
     ...commonConfig,
     output: [
 		{
-			file: 'dist/social-contact.min.js',
-			format: 'iife',
-			name: 'SocialContact'
+			name: 'SocialContact',
+			file: 'dist/socialcontact.min.js',
+			format: 'iife'
+		},
+		{
+			file: 'dist/socialcontact.es.min.js',
+			format: 'es'
+		},
+		{
+			file: 'dist/socialcontact.cjs.min.js',
+			format: 'cjs'
 		}
 	]
 };
