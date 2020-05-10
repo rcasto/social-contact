@@ -16,9 +16,10 @@ Each one of the social profile links will open in a new tab when clicked.
 [Try it out yourself! (codepen)](https://codepen.io/rcasto/full/zYvdJqV)
 
 ## Usage
-```html
-<html lang="en">
 
+### Via script tag
+```html
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,6 @@ Each one of the social profile links will open in a new tab when clicked.
         }
     </style>
 </head>
-
 <body>
     <social-contact
         github="rcasto"
@@ -40,20 +40,24 @@ Each one of the social profile links will open in a new tab when clicked.
     </social-contact>
 
     <script src="https://cdn.jsdelivr.net/npm/social-contact@1.0.1/dist/social-contact.min.js"></script>
-    <script>
-        window.addEventListener('load', () => {
-            // Register the custom element under the name 'social-contact', or name
-            // of your choosing, it must have a '-' in it.
-            //
-            // It will then be usable, in this case via:
-            // <social-contact></social-contact> as seen above
-            customElements.define('social-contact', SocialContact);
-        });
-    </script>
 </body>
-
 </html>
 ```
+
+### Via module bundler
+1. Install package via package manager of your choice.
+```
+npm install social-contact
+```
+
+2. `import 'social-contact'` as part of your app module, it should then be included as part of your bundle.
+```javascript
+import 'social-contact';
+
+// Rest of your code...
+```
+
+3. You can now use `<social-contact></social-contact>` in your app views!
 
 If any of these properties is omitted, then that social contact method is simply not rendered.
 

@@ -53,13 +53,6 @@
     <script src="https://cdn.jsdelivr.net/npm/social-contact@1.0.1/dist/social-contact.min.js"></script>
     <script>
         window.addEventListener('load', () => {
-            // Register the custom element under the name 'social-contact', or name
-            // of your choosing, it must have a '-' in it.
-            //
-            // It will then be usable, in this case via:
-            // <social-contact></social-contact> as seen above
-            customElements.define('social-contact', SocialContact);
-
             const socialContactRenderContainer = document.querySelector('.social-contact-render-location');
             let socialContact = document.querySelector('social-contact');
 

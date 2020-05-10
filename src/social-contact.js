@@ -130,3 +130,14 @@ export default class SocialContact extends HTMLElement {
         shadowRoot.appendChild(socialContactTemplateClone);
     }
 }
+
+/*
+  Register or associate the web component
+  with a <social-contact></social-contact> element
+*/
+try {
+    customElements.define('social-contact', SocialContact);
+  } catch(err) {
+    // https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define#Exceptions
+    console.error(err);
+  }
