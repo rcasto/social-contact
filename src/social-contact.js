@@ -1,8 +1,8 @@
-import instagramImage from '../images/instagram.png';
-import facebookImage from '../images/facebook.png';
-import githubImage from '../images/github.png';
-import linkedinImage from '../images/linkedin.png';
-import twitterImage from '../images/twitter.png';
+import instagramImage from '../images/instagram-min.png';
+import facebookImage from '../images/facebook-min.png';
+import githubImage from '../images/github-min.png';
+import linkedinImage from '../images/linkedin-min.png';
+import twitterImage from '../images/twitter-min.png';
 
 const templateContent = `
   <style>
