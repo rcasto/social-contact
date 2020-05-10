@@ -40,7 +40,7 @@ Each one of the social profile links will open in a new tab when clicked.
         linkedin="rcasto">
     </social-contact>
 
-    <script async src="https://cdn.jsdelivr.net/npm/social-contact@1.0.1/dist/socialcontact.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/social-contact@1.0.2/dist/socialcontact.min.js"></script>
 </body>
 </html>
 ```
