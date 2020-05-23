@@ -137,7 +137,7 @@ export default class SocialContact extends HTMLElement {
 */
 try {
     customElements.define('social-contact', SocialContact);
-  } catch(err) {
+} catch (err) {
     // https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define#Exceptions
     console.error(err);
-  }
+}
