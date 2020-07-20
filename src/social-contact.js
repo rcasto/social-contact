@@ -4,29 +4,6 @@ import githubImage from '../images/github-min.png';
 import linkedinImage from '../images/linkedin-min.png';
 import twitterImage from '../images/twitter-min.png';
 
-const templateContent = `
-  <style>
-    .social-contact-container {
-      display: flex;
-      justify-content: center;
-      padding: 16px;
-    }
-    .social-contact-container a {
-        margin-right: 16px;
-    }
-    .social-contact-container a:last-of-type {
-        margin-right: 0;
-    }
-    .social-contact-container img {
-        height: 32px;
-    }
-  </style>
-  <div class="social-contact-container"></div>
-`;
-
-const template = document.createElement('template');
-template.innerHTML = templateContent;
-
 function constructSocialContact(socialContact) {
     const socialAnchor = document.createElement('a');
     socialAnchor.href = socialContact.profile;
@@ -82,8 +59,37 @@ function constructInstagramContact(username) {
 }
 
 export default class SocialContact extends HTMLElement {
+    static template = `
+        <style>
+            .social-contact-container {
+            display: flex;
+            justify-content: center;
+            padding: 16px;
+            }
+            .social-contact-container a {
+                margin-right: 16px;
+            }
+            .social-contact-container a:last-of-type {
+                margin-right: 0;
+            }
+            .social-contact-container img {
+                height: 32px;
+            }
+        </style>
+        <div class="social-contact-container"></div>
+    `;
+    /**
+     * @type {HTMLTemplateElement}
+     */
+    static templateElem = null;
+
     constructor() {
         super();
+
+        if (!SocialContact.templateElem) {
+            SocialContact.templateElem = document.createElement('template');
+            SocialContact.templateElem.innerHTML = SocialContact.template;
+        }
     }
     connectedCallback() {
         const shadowRoot = this.attachShadow({
@@ -135,9 +141,11 @@ export default class SocialContact extends HTMLElement {
   Register or associate the web component
   with a <social-contact></social-contact> element
 */
-try {
-    customElements.define('social-contact', SocialContact);
-} catch (err) {
-    // https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define#Exceptions
-    console.error(err);
-}
+(function () {
+    const customElementName = 'social-contact';
+    if (customElements.get(customElementName)) {
+        console.error(`There is already a custom element registered under the name ${customElementName}`);
+    } else {
+        customElements.define(customElementName, SocialContact);
+    }
+}());
