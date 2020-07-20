@@ -1,6 +1,6 @@
 {
   "name": "social-contact",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A web component that displays your contact information across the most popular social networks.",
   "main": "index.js",
   "dependencies": {},
