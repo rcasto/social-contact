@@ -95,7 +95,7 @@ export default class SocialContact extends HTMLElement {
         const shadowRoot = this.attachShadow({
             mode: 'open'
         });
-        const socialContactTemplateClone = template.content.cloneNode(true);
+        const socialContactTemplateClone = SocialContact.templateElem.content.cloneNode(true);
         const socialContactContainer = socialContactTemplateClone.querySelector('.social-contact-container');
 
         const github = this.getAttribute('github') || '';
