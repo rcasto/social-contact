@@ -12,6 +12,7 @@ function constructSocialContact(socialContact) {
 
     const socialImage = document.createElement('img');
     socialImage.src = socialContact.brandImage;
+    socialImage.alt = socialContact.altText;
 
     socialAnchor.appendChild(socialImage);
 
@@ -22,7 +23,8 @@ function constructGithubContact(username) {
     return {
         id: 'github',
         brandImage: githubImage,
-        profile: `https://github.com/${username}`
+        profile: `https://github.com/${username}`,
+        altText: 'GitHub Profile'
     };
 }
 
@@ -30,7 +32,8 @@ function constructLinkedinContact(username) {
     return {
         id: 'linkedin',
         brandImage: linkedinImage,
-        profile: `https://www.linkedin.com/in/${username}`
+        profile: `https://www.linkedin.com/in/${username}`,
+        altText: 'LinkedIn Profile'
     };
 }
 
@@ -38,7 +41,8 @@ function constructTwitterContact(username) {
     return {
         id: 'twitter',
         brandImage: twitterImage,
-        profile: `https://twitter.com/${username}`
+        profile: `https://twitter.com/${username}`,
+        altText: 'Twitter Profile'
     };
 }
 
@@ -46,7 +50,8 @@ function constructFacebookContact(username) {
     return {
         id: 'facebook',
         brandImage: facebookImage,
-        profile: `https://www.facebook.com/${username}`
+        profile: `https://www.facebook.com/${username}`,
+        altText: 'Facebook Profile'
     };
 }
 
@@ -54,7 +59,8 @@ function constructInstagramContact(username) {
     return {
         id: 'instagram',
         brandImage: instagramImage,
-        profile: `https://www.instagram.com/${username}`
+        profile: `https://www.instagram.com/${username}`,
+        altText: 'Instagram Profile'
     };
 }
 
